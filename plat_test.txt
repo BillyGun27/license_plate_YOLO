@@ -1,0 +1,5 @@
+D:\python\YOLO_Collection\LicensePlateYOLO/VOCdevkit/VOCplat_test/JPEGImages/IMG_20190704_102046.jpg 1494,2405,3137,3029,0
+D:\python\YOLO_Collection\LicensePlateYOLO/VOCdevkit/VOCplat_test/JPEGImages/IMG_20190704_105123.JPG 1656,2329,2699,2676,0
+D:\python\YOLO_Collection\LicensePlateYOLO/VOCdevkit/VOCplat_test/JPEGImages/IMG_20190704_105133.JPG 1877,2262,2834,2595,0
+D:\python\YOLO_Collection\LicensePlateYOLO/VOCdevkit/VOCplat_test/JPEGImages/IMG_20190704_112805.JPG 1751,1971,2765,2295,0
+D:\python\YOLO_Collection\LicensePlateYOLO/VOCdevkit/VOCplat_test/JPEGImages/IMG_20190704_114237.jpg 1856,2129,2894,2481,0
