@@ -9,7 +9,7 @@ import numpy as np
 import cv2
 
 def detect_img(yolo):
-    img = "test_data/detected2.jpg"
+    img = "test_data/IMG_20190704_112805.jpg"
     image = Image.open(img)
     #print(image.width)
     r_image = yolo.detect_image(image)

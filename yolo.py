@@ -28,39 +28,15 @@ from kito import reduce_keras_model
 from model.small_mobilenets2 import yolo_body
 #from model.medium_darknet import yolo_body
 
-#model_name = 'new_yolo_trained_weights_final.h5'
-#model_name = 'new_mobilenet_trained_weights_final.h5'
-#model_name = 'trained_weights_final_mobilenetv2.h5'
-#model_name = 'trained_weights_final_small_mobilenet.h5'
-#model_name = 'small_mobilenet_trained_weights_final.h5'
-#model_name = 'small_mobilenets2_trained_weights_final.h5'
-#model_name = 'new_small_mobilenets2_trained_weights_final.h5'
-model_name = 'new_a2_ds_small_mobilenets2_weights_final.h5'
-#model_name = 'bnfuse_small_mobilenets2_trained_model.h5'
-#model_name = 'bnfuse_tiny_yolo_trained.h5'
-#model_name = 'bnfuse_med_tiny_yolo.h5'
-#model_name = 'bnfuse_a2_ds_small_mobilenets2_trained_model.h5'
-#model_name = 'tiny_yolo.h5'
-#model_name = 'new_tiny_yolo_trained_weights_final.h5'
-#model_name = '2scale_small_mobilenet_trained_model.h5'
-#model_name = '1scale_tiny_yolo_model.h5'
-#model_name = 'new_tiny_yolo_trained_weights_final.h5'
-#model_name = 'new_med_darknet_trained_weights_final.h5'
-#model_name = 'quantized_mobilenets2.h5'
-#model_name = 'eld_yolo_trained_weights_final.h5'
-model_name = 'eld_small_mobilenets2_trained_weights_final.h5'
-#model_name = 'eld_distill_small_mobilenets2_a1_2_trained_weights_final.h5'
-#model_name = 'eld_med_tiny_yolo_trained_weights_final.h5'
-#model_name = 'eld_tiny_yolo_trained_weights_final.h5'
+model_name = 'plat_yolo_trained_weights_final.h5'
+
 
 class YOLO(object):
     _defaults = {
         "model_path": 'model_data/'+model_name,#yolo.h5,trained_weights_final.h5
-        "classes_path": 'class/elderly_classes.txt',#voc_classes.txt,coco_classes.txt
-        "anchors_path": 'anchors/elderly_anchors.txt',#yolo_anchors.txt
-        #"anchors_path": 'anchors/yolo_anchors.txt',#yolo_anchors.txt
-        #"classes_path": 'class/voc_classes.txt',#voc_classes.txt,coco_classes.txt
-        "score" : 0.035,
+        "classes_path": 'class/plat_classes.txt',#voc_classes.txt,coco_classes.txt
+        "anchors_path": 'anchors/plat_yolo_anchors_test.txt',#yolo_anchors.txt
+        "score" : 0.1,
         "iou" : 0.45,
         "model_image_size" : (416, 416),#416,288,224,160,96 32multiplier
         "gpu_num" : 1,

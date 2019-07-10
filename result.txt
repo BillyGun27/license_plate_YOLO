@@ -1,0 +1,3 @@
+loaded weights logs/000/plat_yolo_trained_weights_final.h5
+plat: 0.4095
+mAP: 0.4095
