@@ -25,7 +25,7 @@ def _main():
     epoch_end_final = 100#60
     model_name = 'plat_yolo'
     log_dir = 'logs/000/'
-    model_path = 'Imagenet'
+    model_path = ''
 
     train_path = 'plat.txt'
     val_path = 'plat_test.txt'
@@ -66,7 +66,7 @@ def _main():
     num_train = int(len(train_lines))
     num_val = int(len(val_lines))
 
-    meanAP = AveragePrecision(data_generator_wrapper(val_lines , 1 , input_shape, anchors, num_classes) , num_val , input_shape , len(anchors)//3 , anchors ,num_classes,log_dir)
+    #meanAP = AveragePrecision(data_generator_wrapper(val_lines , 1 , input_shape, anchors, num_classes) , num_val , input_shape , len(anchors)//3 , anchors ,num_classes,log_dir)
 
     # Train with frozen layers first, to get a stable loss.
     # Adjust num epochs to your dataset. This step is enough to obtain a not bad model.

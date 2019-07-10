@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 from os import getcwd
 import os
 
-sets=['plat_test']
+sets=['plat','plat_test']
 
 classes = ["plat"]
 #classes = ["person"]
