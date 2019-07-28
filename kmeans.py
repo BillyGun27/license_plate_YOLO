@@ -95,7 +95,7 @@ class YOLO_Kmeans:
 
 
 if __name__ == "__main__":
-    cluster_number = 9
-    filename = "plat.txt"
+    cluster_number = 9 #9 utk YOLO dan 6 untuk Tiny YOLO
+    filename = "plat.txt" #plat.txt , plat_test.txt
     kmeans = YOLO_Kmeans(cluster_number, filename)
     kmeans.txt2clusters()

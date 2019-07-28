@@ -20,13 +20,12 @@ from utils.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
 
-from kito import reduce_keras_model
+from kito import reduce_keras_model #mempercepat komputasi
 
-#from model.yolo3 import yolo_body, tiny_yolo_body
-#from model.mobilenet import yolo_body
-#from model.mobilenetv2 import yolo_body
+##Pilih model yang akan digunakan (pilih salah satu)
+#from model.yolo3 import yolo_body
 from model.small_mobilenets2 import yolo_body
-#from model.medium_darknet import yolo_body
+#from model.yolo3 import tiny_yolo_body
 
 model_name = 'plat_yolo_trained_weights_final.h5'
 
@@ -38,7 +37,7 @@ class YOLO(object):
         "anchors_path": 'anchors/plat_yolo_anchors_test.txt',#yolo_anchors.txt
         "score" : 0.1,
         "iou" : 0.45,
-        "model_image_size" : (416, 416),#416,288,224,160,96 32multiplier
+        "model_image_size" : (416, 416),#416,288,224,160,96 kelipatan 32
         "gpu_num" : 1,
     }
 

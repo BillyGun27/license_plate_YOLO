@@ -6,7 +6,9 @@
 
 A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/YAD2K](https://github.com/allanzelener/YAD2K).
 
+modified from [qqwwee/keras-yolo3](https://github.com/qqwweee/keras-yolo3) 
 
+reduce computation time with [ZFTurbo/Keras-inference-time-optimize](https://github.com/ZFTurbo/Keras-inference-time-optimizer) 
 ---
 
 ## Quick Start

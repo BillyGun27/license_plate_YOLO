@@ -15,23 +15,27 @@ from utils.evaluation import AveragePrecision
 
 import argparse
 
-#change model here
+##Pilih model yang akan digunakan (pilih salah satu)
 #from model.yolo3 import yolo_body
 from model.small_mobilenets2 import yolo_body
 #from model.yolo3 import tiny_yolo_body
 
 def _main():
-    epoch_end_first = 50#30
-    epoch_end_final = 100#60
-    model_name = 'plat_yolo'
+    epoch_end_first = 50#75
+    epoch_end_final = 100#200
+    model_name = 'plat_yolo' # nama model
     log_dir = 'logs/000/'
-    model_path = ''
 
-    train_path = 'plat.txt'
-    val_path = 'plat_test.txt'
-    #test_path = '2007_test.txt'
-    classes_path = 'class/plat_classes.txt'
-    anchors_path = 'anchors/plat_yolo_anchors.txt'
+    ## pretrain 
+    ## contoh model_data/yolo_weights.h5, model_data/tiny_yolo_weights.h5
+    ## mobilenet '' kosong karena pretrain otomatis dari keras
+    model_path = '' 
+
+    train_path = 'plat.txt' #dari voc_custom_annotation.py
+    val_path = 'plat_test.txt' #dari voc_custom_annotation.py
+    #test_path = '2007_test.txt' 
+    classes_path = 'class/plat_classes.txt' #dari folder class
+    anchors_path = 'anchors/plat_yolo_anchors.txt' #dari kmeans.py
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
     anchors = get_anchors(anchors_path)
@@ -105,7 +109,7 @@ def _main():
             'yolo_loss' : lambda y_true, y_pred: y_pred}) # recompile to apply the change
         print('Unfreeze all of the layers.')
 
-        batch_size =  32 note that more GPU memory is required after unfreezing the body
+        batch_size =  32 #note that more GPU memory is required after unfreezing the body
 
 
         print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
